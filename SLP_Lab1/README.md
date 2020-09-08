@@ -27,3 +27,5 @@ Predictions of the word __cit__:
 7. __win__
 * **Step 8: Checker's Evaluation**
 Just apply checker on a set of 20 word and check the results.
+* **Step 9: Word2Vec representation
+Train 100 2d word2vec embeddings using the Word2Vec class of gensim. The window size is 5 and the #epochs is 1000.
