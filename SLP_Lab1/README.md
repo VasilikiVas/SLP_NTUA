@@ -47,7 +47,13 @@ The procedure is the same with the previous acceptors, transducers anr checker b
 Creation of X_train, y_train, X_test, y_test sets. 
 * **Step 17: BOW representation**
 Representation of the words as one hot encodings and usage of TF-IDF weights (​https://en.wikipedia.org/wiki/Tf–idf​). Consequently we use we use CountVectorizer and TfidfVectorizer of sklearn and using the LogisticRegression we achieve the next results respectively:
-* ___Accuracy of training data =  0.9998___
-___Accuracy of testing data =  0.8624___
+1) ___Accuracy of training data =  0.9998___
+   ___Accuracy of testing data =  0.8624___
+2) ___Accuracy of training data =  0.9365___
+   ___Accuracy of testing data =  0.8737___
+* **Step 18: Word2Vec representations for classification**
+Usage of step 9 model and LogisticRegression and we achieve the next results:
+___Accuracy of training data =  0.73___
+___Accuracy of testing data =  0.7342___
 
-
+For further informations about each step you can use google translator to translate the greek comments which are more detailed.
