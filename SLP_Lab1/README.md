@@ -29,3 +29,25 @@ Predictions of the word __cit__:
 Just apply checker on a set of 20 word and check the results.
 * **Step 9: Word2Vec representation**
 Train 100 2d word2vec embeddings using the Word2Vec class of gensim. The window size is 5 and the #epochs is 1000.
+### PART1 - ORTHOGRAPHER
+* **Step 10: Export Statistical data**
+The word_level and character_level funtions calculate the propability of each word or character respectively.
+* **Step 11: FST Transducer again**
+The only difference from the step 5 is the weights. There the weight is __weight = - log (Probability)__ where the propability has been calculated in the previous step.
+* **Step 12: FST Acceptor again**
+Like the step 6 but this time use weights as previously.
+* **Step 13: Spell Checker again**
+New Spell Checker = New FST Transducer + New FST Acceptor
+* **Step 14: Checker's Evaluation again**
+The Word-Level spell checher suggests a word which is frequently appered at the text. On the other hand Unigram spell checker suggests a word where the corrected letters are frequently appered at the text.
+* **Step 15: Bigram Model**
+The procedure is the same with the previous acceptors, transducers anr checker but this time we use the __- log (Probability)__ of each bigram (a pair of two characters).
+### PART2 - SENTIMENT ANALYSIS
+* **Step 16: Data Preprocess**
+Creation of X_train, y_train, X_test, y_test sets. 
+* **Step 17: BOW representation**
+Representation of the words as one hot encodings and usage of TF-IDF weights (​https://en.wikipedia.org/wiki/Tf–idf​). Consequently we use we use CountVectorizer and TfidfVectorizer of sklearn and using the LogisticRegression we achieve the next results respectively:
+* ___Accuracy of training data =  0.9998___
+___Accuracy of testing data =  0.8624___
+
+
